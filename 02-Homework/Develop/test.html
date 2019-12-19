@@ -6,31 +6,198 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
         <link href="https://fonts.googleapis.com/css?family=BioRhyme|Cabin&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <title>Document</title>
         <style>
+
+          @page {
+            margin: 0;
+          }
+         *,
+         *::after,
+         *::before {
+         box-sizing: border-box;
+         }
+         html, body {
+         padding: 0;
+         margin: 0;
+         }
+         html, body, .wrapper {
+         height: 100%;
+         }
+         .wrapper {
+         background-color: #DE9967;
+         padding-top: 100px;
+         }
+         .footer {
+          background-color: #DE9967;
+          bottom:0%;
+          position:fixed;
+          padding:20px;
+         }
+         body {
+         background-color: white;
+         -webkit-print-color-adjust: exact !important;
+         font-family: 'Cabin', sans-serif;
+         }
+         main {
+         background-color: #E9EDEE;
+         height: auto;
+         padding-top: 30px;
+         }
+         h1, h2, h3, h4, h5, h6 {
+         font-family: 'BioRhyme', serif;
+         margin: 0;
+         }
+         h1 {
+         font-size: 3em;
+         }
+         h2 {
+         font-size: 2.5em;
+         }
+         h3 {
+         font-size: 2em;
+         }
+         h4 {
+         font-size: 1.5em;
+         }
+         h5 {
+         font-size: 1.3em;
+         }
+         h6 {
+         font-size: 1.2em;
+         }
+         .photo-header {
+         position: relative;
+         margin: 0 auto;
+         margin-bottom: -50px;
+         display: flex;
+         justify-content: center;
+         flex-wrap: wrap;
+         background-color: #870603;
+         color: white;
+         padding: 10px;
+         width: 95%;
+         border-radius: 6px;
+         }
+         .photo-header img {
+         width: 250px;
+         height: 250px;
+         border-radius: 50%;
+         object-fit: cover;
+         margin-top: -75px;
+         border: 6px solid white;
+         box-shadow: rgba(0, 0, 0, 0.3) 4px 1px 20px 4px;
+         }
+         .photo-header h1, .photo-header h2 {
+         width: 100%;
+         text-align: center;
+         }
+         .photo-header h1 {
+         margin-top: 10px;
+         }
+         .links-nav {
+         width: 100%;
+         text-align: center;
+         padding: 20px 0;
+         font-size: 1.1em;
+         }
+         .nav-link {
+         display: inline-block;
+         margin: 5px 10px;
+         }
+         .workExp-date {
+         font-style: italic;
+         font-size: .7em;
+         text-align: right;
+         margin-top: 10px;
+         }
+         .container {
+         padding: 50px;
+         padding-left: 100px;
+         padding-right: 100px;
+         }
+
+         .row {
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: space-between;
+           margin-top: 20px;
+           margin-bottom: 20px;
+         }
+
+         .card {
+           padding: 20px;
+           border-radius: 6px;
+           background-color: #870603;
+           color: white;
+           margin: 20px;
+         }
+         
+         .col {
+         flex: 1;
+         text-align: center;
+         }
+
+         a, a:hover {
+         text-decoration: none;
+         color: inherit;
+         font-weight: bold;
+         }
+
+         @media print { 
+          body { 
+            zoom: .75; 
+          } 
+         }
+
+
         </style>
     </head>
     <body>
-    <div class="jumbotron jumbotron-fluid">
-     <div class="container">
-      <div class="row">
 
-        <div class = "wrapper">
-            <h1 class="photo-header" style = "color: red"> JOHAN BUENO</h1>
-            <hr>
-            <img class="photo-header img" src="https://avatars2.githubusercontent.com/u/39074448?v=4" alt="" style="width: 250px;height: 250px;">
-            <div class="card" > </div>
-            <div> Company:United Supply</div>
-            <a src= "17"> Repo Link </a>
-            <div> Public Repositories: 17</div>
-            <div> Followers: 10</div>
-            <div> Following: 7</div>
-            <div>Location: Charlotte, NC </div>
+     <div class="container">
+       <div class="row">
+         <div class = " col-md-12  wrapper">
+          <img class="photo-header img" src="https://avatars2.githubusercontent.com/u/39074448?v=4" alt="Profile Pic" style="width: 250px;height: 250px;">
+          <br>
+          <br>
+          <h3 class="" style = "color: red; text-align:center"> JOHAN BUENO</h3>
+          <hr>
+          <div class="row">
+          <div class="col-md-4"> Location: Charlotte, NC </div>
+          <a class="col-md-4" href= "https://github.com/johanbueno"> GitHub Profile </a>
+          <div class="col-md-4"> Company:United Supply</div>
+        </div>  
+       </div>    
+    </div>    
+     <div> 
+     <p>
+       I am 30 years old. My goal is to become a successful web developer. I'm currently attending the University of North Carolina's boot camp coding program.
+     </p>
+     </div>
+
+         <div container="container"> 
+         <div class="row">
+          <div class="card" >Public Repositories: 17 </div>
+          <div class="card" >Followers: 10 </div>
+          <div class="card" >Following: 7 </div>
+          <div class="card" >
+           <a href="https://api.github.com/users/johanbueno/repos"> Check Repos</a>
+          </div>
+          </div>
+          </div>
+            
+           
+            
         </div>
-       </div>
-      </div>
-    </div>
+
+
+    
 
 </body>
+<footer>
+     
+</footer>
 
 </html>
