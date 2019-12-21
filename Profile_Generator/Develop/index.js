@@ -56,8 +56,7 @@ function gitHubUser() {
         fs.writeFile("test.html", generateHTML(res, color), (err) => {
           if (err) throw err
           console.log("wrote the file")
-        })
-        var html = fs.readFileSync('test.html', 'utf8');
+          var html = fs.readFileSync('test.html', 'utf8');
         var options = { format: 'Letter' };
 
 
@@ -65,6 +64,8 @@ function gitHubUser() {
           if (err) return console.log(err);
           console.log(res);
         });
+        })
+        
 
       })
     })
