@@ -134,7 +134,6 @@ function generateHTML(res, color) {
          .footer {
           background-color: ${colors[color].wrapperBackground};
           bottom:0%;
-          withd:100%;
           height:300px;
           position:fixed;
           padding:20px;
@@ -271,13 +270,13 @@ function generateHTML(res, color) {
           <h3 class="" style = "color: ${color};"> ${res.data.name}</h3>
           <hr>
           <div class="row">
-          <div class="col"> Location: ${res.data.location} </div>
+          <div class="col"> <h5>Location: ${res.data.location} </h5> </div>
           <div class ="col">
           <i class="fab fa-github">  </i>
-          <a class="col" href= "${res.data.html_url}"> GitHub Profile </a>
+          <a class="col" href= "${res.data.html_url}"> <h5> GitHub Profile</h5> </a>
           </div>
         
-          <div class="col"> Company:${res.data.company}</div>
+          <div class="col"> <h5>Company:${res.data.company} </h5> </div>
         </div>  
        </div>    
     </div>    
