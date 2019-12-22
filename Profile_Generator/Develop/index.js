@@ -109,7 +109,6 @@ function generateHTML(res, color) {
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
         <link href="https://fonts.googleapis.com/css?family=BioRhyme|Cabin&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <title>Document</title>
         <style>
 
@@ -135,6 +134,8 @@ function generateHTML(res, color) {
          .footer {
           background-color: ${colors[color].wrapperBackground};
           bottom:0%;
+          withd:100%;
+          height:300px;
           position:fixed;
           padding:20px;
          }
@@ -261,16 +262,22 @@ function generateHTML(res, color) {
 
      <div class="container">
        <div class="row">
-         <div class = " col-md-12  wrapper">
-          <img class="photo-header img" src="${res.data.avatar_url}" alt="Profile Pic" style="width: 250px;height: 250px;">
+         <div class = " col  wrapper">
+         <div class ="photo-header">
+         <img  src="${res.data.avatar_url}" alt="Profile Pic">
+         </div>
           <br>
           <br>
-          <h3 class="" style = "color: ${color}; text-align:center"> ${res.data.name}</h3>
+          <h3 class="" style = "color: ${color};"> ${res.data.name}</h3>
           <hr>
           <div class="row">
-          <div class="col-md-4"> Location: ${res.data.location} </div>
-          <a class="col-md-4" href= "${res.data.html_url}"> GitHub Profile </a>
-          <div class="col-md-4"> Company:${res.data.company}</div>
+          <div class="col"> Location: ${res.data.location} </div>
+          <div class ="col">
+          <i class="fab fa-github">  </i>
+          <a class="col" href= "${res.data.html_url}"> GitHub Profile </a>
+          </div>
+        
+          <div class="col"> Company:${res.data.company}</div>
         </div>  
        </div>    
     </div>    
@@ -282,11 +289,13 @@ function generateHTML(res, color) {
 
          <div container="container"> 
          <div class="row">
-          <div class="card" >Public Repositories: ${res.data.public_repos} </div>
-          <div class="card" >Followers: ${res.data.followers} </div>
-          <div class="card" >Following: ${res.data.following} </div>
+          <div class="card" > <h4>Public Repositories: ${res.data.public_repos} </h4></div>
+          <div class="card" > <h4>Followers: ${res.data.followers} </h4> </div>
+          <div class="card" > <h4> Following: ${res.data.following}</h4> </div>
           <div class="card" >
-           <a href="${res.data.repos_url}"> Check Repos</a>
+          <h4>
+          <a href="${res.data.repos_url}"> Check Repos</a>
+          </h4>
           </div>
           </div>
           </div>
@@ -294,14 +303,12 @@ function generateHTML(res, color) {
            
             
         </div>
-
-
+        <div class="container">
+        <div class=" col  wrapper"></div>
+        </div>
     
-
 </body>
-<footer>
-     
-</footer>
+
 
 </html>`;
 
