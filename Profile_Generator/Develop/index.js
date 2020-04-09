@@ -6,6 +6,7 @@ var pdf = require('html-pdf');
 
 
 function gitHubUser() {
+
   return inquirer.prompt([
     {
       type: "input",
@@ -25,7 +26,7 @@ function gitHubUser() {
       const queryUrl = `https://api.github.com/users/${username}`
 
       return axios.get(queryUrl).then(function (res) {
-        //  const general = res.data
+         const general = res.data
         // const gitHubName = res.data.name
         // const userLink = res.data.repos_url
         // const imgUser = res.data.avatar_url
@@ -47,7 +48,7 @@ function gitHubUser() {
         // console.log(followers)
         // console.log(following)
         // console.log(location)
-        //  console.log(general);
+         console.log(general);
         // console.log(color,"<=======")
         // 
 
