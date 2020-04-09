@@ -26,7 +26,7 @@ function gitHubUser() {
       const queryUrl = `https://api.github.com/users/${username}`
 
       return axios.get(queryUrl).then(function (res) {
-         const general = res.data
+        const general = res.data
         // const gitHubName = res.data.name
         // const userLink = res.data.repos_url
         // const imgUser = res.data.avatar_url
@@ -48,7 +48,7 @@ function gitHubUser() {
         // console.log(followers)
         // console.log(following)
         // console.log(location)
-         console.log(general);
+        console.log(general);
         // console.log(color,"<=======")
         // 
 
@@ -58,15 +58,15 @@ function gitHubUser() {
           if (err) throw err
           console.log("wrote the file")
           var html = fs.readFileSync('test.html', 'utf8');
-        var options = { format: 'Letter' };
+          var options = { format: 'Letter' };
 
 
-        pdf.create(html, options).toFile('test.pdf', function (err, res) {
-          if (err) return console.log(err);
-          console.log(res);
-        });
+          pdf.create(html, options).toFile('test.pdf', function (err, res) {
+            if (err) return console.log(err);
+            console.log(res);
+          });
         })
-        
+
 
       })
     })
@@ -289,17 +289,15 @@ function generateHTML(res, color) {
      </div>
 
          <div container="container"> 
-         <div class="row">
-          <div class="card" > <h4>Public Repositories: ${res.data.public_repos} </h4></div>
-          <div class="card" > <h4>Followers: ${res.data.followers} </h4> </div>
-          <div class="card" > <h4> Following: ${res.data.following}</h4> </div>
-          <div class="card" >
-          <h4>
-          <a href="${res.data.repos_url}"> Check Repos</a>
-          </h4>
+            <div class="row">
+            <div class="card" > <h4>Public Repositories: ${res.data.public_repos} </h4></div>
+            <div class="card" > <h4>Followers: ${res.data.followers} </h4> </div>
+            <div class="card" > <h4> Following: ${res.data.following}</h4> </div>
+            <div class="card" ><h4> <a href="${res.data.repos_url}"> Check Repos</a></h4> </div>
+            <div class="card"><h4> Id:${res.data.id}</h4> </div>
+
           </div>
-          </div>
-          </div>
+
             
            
             
