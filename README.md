@@ -8,15 +8,15 @@ Developer Profile Generator
 # Features 
 The  Profile will be populated with the following:
 
-Profile image
-User name
-Link to User GitHub profile
-location
-User bio
-Number of public repositories
-Number of followers
-Number of users following
-Styling with User color selection
+*  Profile image
+*  User name
+*  Link to User GitHub profile
+*  location
+*  User bio
+*  Number of public repositories
+*  Number of followers
+*  Number of users following
+*  Styling with User color selection
 
 # Images 
 <img src="./Profile_Generator/Develop/assets/img/Screen Shot 2019-12-21 at 9.09.45 PM.png">
