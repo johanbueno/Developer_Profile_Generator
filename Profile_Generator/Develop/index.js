@@ -279,6 +279,7 @@ function generateHTML(res, color) {
         
           <div class="col"> <h5>Company:${res.data.company} </h5> </div>
         </div>  
+        <div class="col"><a href="${res.data.blog}"> <h5> Portfolio</h5> </a>  </div>
        </div>    
     </div>    
      <div> 
